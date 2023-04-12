@@ -19,10 +19,9 @@ public class WeatherController {
 
     @GetMapping("/test")
     public @ResponseBody ResponseDto simpleQuery(@RequestParam String param) {
-        throw  new NullPointerException();
-//        ResponseDto allInfo = weatherRTSimpl.getAllInfo(param);
-//        weatherDBimpl.saveResponse(allInfo);
-       // return allInfo;
+        ResponseDto allInfo = weatherRTSimpl.getAllInfo(param);
+        //weatherDBimpl.saveResponse(allInfo);
+        return allInfo;
     }
 
 }
